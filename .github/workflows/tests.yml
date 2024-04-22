@@ -19,11 +19,22 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - uses: actions/setup-python@v2
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: cram
 
       - name: Configure git for testing
         run: |
           git config --global user.email "test@example.com"
           git config --global user.name "Test User"
 
+      - name: Install dependencies
+        run: gem install subcommand
+
       - name: Run unit tests
         run: rake unit_tests
+
+      - name: Run integration tests
+        run: rake int_tests

@@ -48,9 +48,13 @@ task :unit_tests do
   sh "ruby test/unit_tests.rb"
 end
 
+desc 'run integration tests'
+task :int_tests do
+  sh "RIM=\"ruby #{Dir.pwd}/rim.rb\" cram integration_tests/*.t"
+end
+
 task :release => [:prepare_package_rdoc, :package]
 
 task :clobber => [:clobber_rdoc, :clobber_package]
 
 task :default => :run_tests
-
