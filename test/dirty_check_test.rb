@@ -7,7 +7,7 @@ require 'test_helper'
 require 'rim/rim_info'
 require 'rim/dirty_check'
 
-class DirtyCheckTest < MiniTest::Test
+class DirtyCheckTest < Minitest::Test
 
 include FileUtils
 include TestHelper

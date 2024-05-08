@@ -8,7 +8,7 @@ require 'rim/git'
 require 'rim/dirty_check'
 require 'rim/status_builder'
 
-class StatusBuilderTest < MiniTest::Test
+class StatusBuilderTest < Minitest::Test
 
 include FileUtils
 include TestHelper

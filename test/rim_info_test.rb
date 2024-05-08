@@ -6,7 +6,7 @@ require 'fileutils'
 require 'test_helper'
 require 'rim/rim_info'
 
-class RimInfoTest < MiniTest::Test
+class RimInfoTest < Minitest::Test
 
 include FileUtils
 include TestHelper

@@ -6,7 +6,7 @@ require 'fileutils'
 require 'test_helper'
 require 'rim/git'
 
-class GitTest < MiniTest::Test
+class GitTest < Minitest::Test
 
 include FileUtils
 include TestHelper

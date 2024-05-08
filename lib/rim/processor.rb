@@ -50,10 +50,6 @@ def remote_path(remote_url)
     gsub(/\.\.[\\\/]/,'')
 end
 
-def get_relative_path(path)
-  FileHelper.get_relative_path(path, @ws_root)
-end
-
 def get_absolute_remote_url(remote_url)
   if remote_url.start_with?("file:")
     remote_url = remote_url.gsub(/^file:(\/\/)?/, "")

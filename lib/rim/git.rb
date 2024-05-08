@@ -33,7 +33,7 @@ class GitSession
 
   def self.open(execute_dir, options = {})
     log = @logger || Logger.new($stdout)
-    self.new(log, execute_dir, options)
+    new(log, execute_dir, options)
   end
 
   def self.next_invocation_id

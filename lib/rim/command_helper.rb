@@ -35,7 +35,7 @@ class CommandHelper < Processor
   def create_module_info(remote_url, local_path, target_revision, ignores, subdir)
     ModuleInfo.new(
         remote_url,
-        get_relative_path(local_path),
+        FileHelper.get_relative_path(local_path),
         target_revision,
         ignores,
         remote_url ? get_remote_branch_format(remote_url) : nil,
